@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Omega Solutions – Isolation à Marly (59)</title>
+  <meta name="description" content="Omega Solutions, entrepreneur spécialisé dans l'isolation à Marly (59770). Isolation thermique, combles, murs, planchers. Certifié RGE. Devis gratuit."/>
+  <meta name="keywords" content="isolation marly, isolation thermique nord, combles perdus, isolation extérieure, RGE, Valenciennes isolation"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #0d2137;
+      --blue: #1a4a7a;
+      --accent: #e85d04;
+      --warm: #f48c06;
+      --green: #16a34a;
+      --light: #f5f7fa;
+      --border: #e4e8ef;
+      --text: #1a2436;
+      --muted: #64748b;
+      --white: #fff;
+      --r: 14px;
+      --sh: 0 4px 28px rgba(0,0,0,0.08);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; line-height: 1.6; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      background: rgba(255,255,255,0.97); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 6%; height: 70px;
+    }
+    .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .logo-mark {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--blue));
+      display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1rem;
+    }
+    .logo-text { font-size: 1.2rem; font-weight: 800; color: var(--primary); letter-spacing: -0.3px; }
+    .logo-text span { color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.89rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta {
+      background: var(--accent); color: #fff; padding: 10px 20px;
+      border-radius: 8px; font-weight: 700; font-size: 0.88rem;
+      text-decoration: none; transition: all .2s; white-space: nowrap;
+    }
+    .nav-cta:hover { background: #c84f00; transform: translateY(-1px); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #081825 0%, #0d2137 55%, #12304f 100%);
+      min-height: 100vh; display: flex; align-items: center;
+      padding: 100px 6% 70px; position: relative; overflow: hidden;
+    }
+    .hero::after {
+      content: ''; position: absolute; right: -100px; bottom: -100px;
+      width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,93,4,0.08) 0%, transparent 70%);
+    }
+    .hero-inner { max-width: 1160px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(232,93,4,0.14); border: 1px solid rgba(232,93,4,0.28);
+      color: var(--warm); padding: 5px 13px; border-radius: 50px;
+      font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px;
+      margin-bottom: 22px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 3.8vw, 3.1rem); font-weight: 900;
+      color: #fff; line-height: 1.12; letter-spacing: -1px; margin-bottom: 18px;
+    }
+    .hero h1 em { font-style: normal; color: var(--warm); }
+    .hero-desc { color: rgba(255,255,255,0.65); font-size: 1rem; line-height: 1.72; margin-bottom: 36px; max-width: 480px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 42px; }
+    .btn-main {
+      background: var(--accent); color: #fff; padding: 14px 26px;
+      border-radius: 10px; font-weight: 700; font-size: 0.93rem;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+      transition: all .2s; box-shadow: 0 4px 16px rgba(232,93,4,0.25);
+    }
+    .btn-main:hover { background: #c84f00; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,93,4,0.4); }
+    .btn-ghost {
+      color: #fff; padding: 14px 26px; border-radius: 10px; font-weight: 600; font-size: 0.93rem;
+      text-decoration: none; border: 1.5px solid rgba(255,255,255,0.18);
+      display: inline-flex; align-items: center; gap: 8px; transition: all .2s;
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+    .hero-trust { display: flex; gap: 24px; flex-wrap: wrap; }
+    .htrust-item { display: flex; align-items: center; gap: 7px; font-size: 0.82rem; color: rgba(255,255,255,0.55); font-weight: 500; }
+    .htrust-item i { color: var(--warm); }
+
+    /* HERO RIGHT – score + cards */
+    .hero-right { display: flex; flex-direction: column; gap: 14px; }
+    .score-card {
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px; padding: 26px 28px; backdrop-filter: blur(8px);
+    }
+    .score-top { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+    .score-num { font-size: 3rem; font-weight: 900; color: #fff; line-height: 1; }
+    .score-right .stars { font-size: 1.1rem; color: #fbbf24; letter-spacing: 2px; }
+    .score-right .label { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-top: 3px; }
+    .score-bar { height: 4px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+    .score-bar-fill { height: 100%; background: linear-gradient(to right, var(--accent), var(--warm)); border-radius: 10px; }
+    .mini-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .mini-card {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 12px; padding: 18px 16px; color: #fff;
+    }
+    .mini-card i { font-size: 1.3rem; margin-bottom: 8px; display: block; color: var(--warm); }
+    .mini-card strong { font-size: 0.92rem; display: block; font-weight: 700; }
+    .mini-card span { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
+    .rge-badge {
+      background: linear-gradient(135deg, rgba(22,163,74,0.2), rgba(22,163,74,0.1));
+      border: 1px solid rgba(22,163,74,0.3); border-radius: 12px; padding: 16px 20px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .rge-icon { width: 44px; height: 44px; background: var(--green); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.1rem; flex-shrink: 0; }
+    .rge-text strong { color: #fff; font-size: 0.9rem; font-weight: 700; display: block; }
+    .rge-text span { color: rgba(255,255,255,0.55); font-size: 0.78rem; }
+
+    /* STRIP */
+    .strip { background: var(--primary); padding: 16px 6%; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .strip-item { display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,0.7); font-size: 0.83rem; font-weight: 500; }
+    .strip-item i { color: var(--warm); }
+
+    /* SECTIONS */
+    section { padding: 88px 6%; }
+    .inner { max-width: 1160px; margin: 0 auto; }
+    .sec-label { font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 8px; }
+    .sec-title { font-size: clamp(1.6rem, 2.8vw, 2.3rem); font-weight: 800; color: var(--primary); line-height: 1.18; letter-spacing: -0.5px; }
+    .sec-sub { color: var(--muted); font-size: 0.97rem; line-height: 1.7; margin-top: 10px; max-width: 540px; }
+    .sec-head { margin-bottom: 52px; }
+
+    /* SERVICES */
+    .services-bg { background: var(--white); }
+    .svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .svc-card {
+      border: 1.5px solid var(--border); border-radius: var(--r); padding: 28px 24px;
+      transition: all .25s; position: relative; overflow: hidden;
+    }
+    .svc-card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 16px 36px rgba(232,93,4,0.1); }
+    .svc-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(to right, var(--accent), var(--warm));
+      transform: scaleX(0); transform-origin: left; transition: transform .25s;
+    }
+    .svc-card:hover::before { transform: scaleX(1); }
+    .svc-ico {
+      width: 52px; height: 52px; border-radius: 12px;
+      background: linear-gradient(135deg, #fff3e8, #ffe4c0);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 16px;
+    }
+    .svc-card h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+    .svc-card p { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
+    .svc-list { list-style: none; margin-top: 12px; display: flex; flex-direction: column; gap: 5px; }
+    .svc-list li { font-size: 0.8rem; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+    .svc-list li::before { content: '→'; color: var(--accent); font-weight: 700; font-size: 0.78rem; }
+
+    /* WHY */
+    .why-bg { background: var(--light); }
+    .why-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .why-panel {
+      background: linear-gradient(135deg, var(--primary), var(--blue));
+      border-radius: 20px; padding: 40px 36px; color: #fff;
+    }
+    .why-panel-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; }
+    .why-panel-sub { font-size: 0.82rem; color: rgba(255,255,255,0.55); margin-bottom: 28px; }
+    .panel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+    .panel-item {
+      background: rgba(255,255,255,0.09); border-radius: 12px; padding: 18px 16px;
+      text-align: center;
+    }
+    .panel-num { font-size: 1.8rem; font-weight: 900; color: var(--warm); }
+    .panel-lbl { font-size: 0.74rem; color: rgba(255,255,255,0.6); margin-top: 3px; }
+    .panel-map {
+      background: rgba(255,255,255,0.06); border-radius: 12px; padding: 16px 18px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .panel-map i { font-size: 1.3rem; color: var(--warm); }
+    .panel-map div strong { font-size: 0.88rem; display: block; color: #fff; }
+    .panel-map div span { font-size: 0.76rem; color: rgba(255,255,255,0.5); }
+    .why-feats { display: flex; flex-direction: column; gap: 20px; }
+    .wfeat { display: flex; gap: 15px; align-items: flex-start; }
+    .wfeat-ico {
+      width: 44px; height: 44px; min-width: 44px; border-radius: 11px;
+      background: #fff; display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; color: var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .wfeat h4 { font-size: 0.94rem; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+    .wfeat p { font-size: 0.83rem; color: var(--muted); line-height: 1.62; }
+
+    /* AIDES */
+    .aides-bg { background: var(--white); }
+    .aides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px; }
+    .aide-card {
+      border-radius: var(--r); padding: 26px 22px; text-align: center;
+      border: 1.5px solid var(--border); transition: all .2s;
+    }
+    .aide-card:hover { border-color: var(--green); transform: translateY(-3px); box-shadow: 0 10px 24px rgba(22,163,74,0.1); }
+    .aide-ico { font-size: 2rem; margin-bottom: 12px; }
+    .aide-card h3 { font-size: 0.97rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .aide-card p { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+    .aide-tag {
+      display: inline-block; margin-top: 10px; padding: 3px 10px;
+      background: #dcfce7; color: var(--green); font-size: 0.72rem; font-weight: 700;
+      border-radius: 50px; text-transform: uppercase; letter-spacing: 0.8px;
+    }
+
+    /* PROCESSUS */
+    .proc-bg { background: var(--light); }
+    .proc-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; position: relative; }
+    .proc-steps::after {
+      content: ''; position: absolute; top: 35px; left: 12.5%; right: 12.5%; height: 2px;
+      background: linear-gradient(to right, var(--accent), var(--warm)); z-index: 0;
+    }
+    .proc-step { text-align: center; padding: 0 14px; position: relative; z-index: 1; }
+    .proc-num {
+      width: 70px; height: 70px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--warm));
+      color: #fff; font-size: 1.3rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 18px; box-shadow: 0 6px 18px rgba(232,93,4,0.28);
+    }
+    .proc-step h3 { font-size: 0.92rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .proc-step p { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+    /* AVIS */
+    .reviews-bg { background: var(--white); }
+    .reviews-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 48px; flex-wrap: gap; }
+    .google-score {
+      display: flex; align-items: center; gap: 16px;
+      background: var(--light); border-radius: 14px; padding: 18px 24px;
+    }
+    .gs-logo { font-size: 1.8rem; }
+    .gs-num { font-size: 2.4rem; font-weight: 900; color: var(--primary); line-height: 1; }
+    .gs-stars { color: #fbbf24; font-size: 1rem; margin: 3px 0; }
+    .gs-label { font-size: 0.78rem; color: var(--muted); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .rev-card {
+      background: var(--light); border-radius: var(--r); padding: 26px;
+      border: 1px solid var(--border); transition: box-shadow .2s;
+    }
+    .rev-card:hover { box-shadow: var(--sh); }
+    .rev-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+    .rev-stars { color: #fbbf24; font-size: 0.88rem; }
+    .rev-src { font-size: 0.72rem; color: var(--muted); display: flex; align-items: center; gap: 4px; }
+    .rev-src i { color: #4285F4; }
+    .rev-text { font-size: 0.86rem; color: var(--text); line-height: 1.7; font-style: italic; margin-bottom: 16px; }
+    .rev-author { display: flex; align-items: center; gap: 10px; }
+    .rev-av {
+      width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.9rem; color: #fff;
+      flex-shrink: 0;
+    }
+    .rev-name { font-weight: 700; font-size: 0.87rem; color: var(--primary); }
+    .rev-date { font-size: 0.74rem; color: var(--muted); }
+
+    /* CONTACT */
+    .contact-bg { background: var(--primary); color: #fff; }
+    .contact-bg .sec-title { color: #fff; }
+    .contact-bg .sec-sub { color: rgba(255,255,255,0.6); }
+    .contact-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: start; }
+    .contact-infos { display: flex; flex-direction: column; gap: 20px; margin-top: 6px; }
+    .ci { display: flex; gap: 14px; align-items: flex-start; }
+    .ci-ico {
+      width: 46px; height: 46px; min-width: 46px; border-radius: 11px;
+      background: rgba(255,255,255,0.1); display: flex; align-items: center;
+      justify-content: center; font-size: 1rem; color: var(--warm);
+    }
+    .ci h4 { font-size: 0.78rem; color: rgba(255,255,255,0.5); font-weight: 500; margin-bottom: 3px; }
+    .ci p { font-size: 0.92rem; font-weight: 600; color: #fff; line-height: 1.5; }
+    .ci a { color: var(--warm); text-decoration: none; }
+    .ci a:hover { text-decoration: underline; }
+    .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .hour-row { display: flex; justify-content: space-between; font-size: 0.8rem; }
+    .hour-day { color: rgba(255,255,255,0.55); }
+    .hour-time { color: #fff; font-weight: 600; }
+    .cform { display: flex; flex-direction: column; gap: 13px; }
+    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+    .cform input, .cform select, .cform textarea {
+      background: rgba(255,255,255,0.08); border: 1.5px solid rgba(255,255,255,0.12);
+      color: #fff; border-radius: 10px; padding: 12px 15px;
+      font-size: 0.88rem; font-family: 'Inter', sans-serif;
+      outline: none; transition: border .2s; width: 100%;
+    }
+    .cform input::placeholder, .cform textarea::placeholder { color: rgba(255,255,255,0.38); }
+    .cform input:focus, .cform textarea:focus, .cform select:focus { border-color: var(--warm); }
+    .cform select option { background: var(--primary); }
+    .cform textarea { resize: vertical; min-height: 110px; }
+    .fsub {
+      background: var(--accent); color: #fff; border: none;
+      padding: 14px 24px; border-radius: 10px; font-weight: 700; font-size: 0.92rem;
+      cursor: pointer; display: flex; align-items: center; gap: 8px;
+      transition: all .2s; width: 100%; justify-content: center; font-family: 'Inter', sans-serif;
+    }
+    .fsub:hover { background: #c84f00; transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { background: #060f1c; color: rgba(255,255,255,0.5); padding: 48px 6% 28px; }
+    .ft-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+    .ft-brand { font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
+    .ft-brand span { color: var(--accent); }
+    .ft-desc { font-size: 0.82rem; line-height: 1.7; max-width: 280px; }
+    .ft-col h4 { color: #fff; font-size: 0.88rem; font-weight: 700; margin-bottom: 14px; }
+    .ft-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .ft-col ul li a { font-size: 0.81rem; color: rgba(255,255,255,0.5); text-decoration: none; transition: color .2s; }
+    .ft-col ul li a:hover { color: var(--warm); }
+    .ft-bottom {
+      border-top: 1px solid rgba(255,255,255,0.07); padding-top: 22px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.77rem; flex-wrap: wrap; gap: 10px;
+    }
+    .ft-legal { display: flex; gap: 18px; }
+    .ft-legal a { color: rgba(255,255,255,0.38); text-decoration: none; }
+    .ft-legal a:hover { color: rgba(255,255,255,0.65); }
+
+    /* RESPONSIVE */
+    @media(max-width:960px) {
+      .nav-links { display: none; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      .why-layout { grid-template-columns: 1fr; }
+      .contact-layout { grid-template-columns: 1fr; }
+      .ft-grid { grid-template-columns: 1fr; gap: 28px; }
+      .proc-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .proc-steps::after { display: none; }
+      .frow { grid-template-columns: 1fr; }
+      .reviews-top { flex-direction: column; align-items: flex-start; gap: 20px; }
+    }
+    @media(max-width:600px) {
+      section { padding: 64px 5%; }
+      nav { padding: 0 5%; }
+      .strip { gap: 14px; }
+      .proc-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-mark"><i class="fa-solid fa-house-crack"></i></div>
+    <div class="logo-text">Omega<span> Solutions</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#aides">Aides</a></li>
+    <li><a href="#pourquoi">À propos</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta"><i class="fa-solid fa-paper-plane"></i> Devis gratuit</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag"><i class="fa-solid fa-map-pin"></i> Marly · Nord (59)</div>
+      <h1>Votre spécialiste<br/><em>isolation</em> dans<br/>le Valenciennois</h1>
+      <p class="hero-desc">Combles, murs, planchers, isolation par l'extérieur... Omega Solutions réduit vos factures d'énergie et améliore votre confort toute l'année.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-main"><i class="fa-solid fa-file-invoice"></i> Demander un devis</a>
+        <a href="tel:0636472528" class="btn-ghost"><i class="fa-solid fa-phone"></i> 06 36 47 25 28</a>
+      </div>
+      <div class="hero-trust">
+        <div class="htrust-item"><i class="fa-solid fa-star"></i> 5/5 sur Google (14 avis)</div>
+        <div class="htrust-item"><i class="fa-solid fa-leaf"></i> Certifié RGE</div>
+        <div class="htrust-item"><i class="fa-solid fa-euro-sign"></i> Éligible MaPrimeRénov'</div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="score-card">
+        <div class="score-top">
+          <div class="score-num">5,0</div>
+          <div class="score-right">
+            <div class="stars">★★★★★</div>
+            <div class="label">14 avis Google</div>
+          </div>
+        </div>
+        <div class="score-bar"><div class="score-bar-fill" style="width:100%"></div></div>
+      </div>
+      <div class="mini-cards">
+        <div class="mini-card"><i class="fa-solid fa-house-chimney"></i><strong>Combles</strong><span>Perdus & aménagés</span></div>
+        <div class="mini-card"><i class="fa-solid fa-wall-brick"></i><strong>Murs ITE/ITI</strong><span>Ext. & Int.</span></div>
+        <div class="mini-card"><i class="fa-solid fa-layer-group"></i><strong>Planchers</strong><span>Sous-sol & vide sanitaire</span></div>
+        <div class="mini-card"><i class="fa-solid fa-wind"></i><strong>VMC</strong><span>Ventilation saine</span></div>
+      </div>
+      <div class="rge-badge">
+        <div class="rge-icon"><i class="fa-solid fa-certificate"></i></div>
+        <div class="rge-text">
+          <strong>Certifié RGE</strong>
+          <span>Reconnaissance Garant de l'Environnement — ouvre droit aux aides d'État</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-item"><i class="fa-solid fa-map-pin"></i> 8 bis Place Louise Michel, 59770 Marly</div>
+  <div class="strip-item"><i class="fa-solid fa-phone"></i> 06 36 47 25 28</div>
+  <div class="strip-item"><i class="fa-solid fa-clock"></i> Lun–Ven 9h–16h30</div>
+  <div class="strip-item"><i class="fa-solid fa-leaf"></i> Éco-matériaux & solutions durables</div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="services-bg">
+  <div class="inner">
+    <div class="sec-head">
+      <div class="sec-label">Nos prestations</div>
+      <h2 class="sec-title">Tous vos travaux d'isolation</h2>
+      <p class="sec-sub">Des solutions sur-mesure pour isoler efficacement votre logement et réduire durablement votre consommation d'énergie.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-ico">🏠</div>
+        <h3>Isolation des combles perdus</h3>
+        <p>Technique rapide et économique pour stopper jusqu'à 30 % des déperditions thermiques d'une maison.</p>
+        <ul class="svc-list">
+          <li>Soufflage laine minérale / ouate</li>
+          <li>Pose en 1 journée</li>
+          <li>Éligible CEE & MaPrimeRénov'</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ico">🔺</div>
+        <h3>Isolation combles aménagés</h3>
+        <p>Isolation des rampants de toiture pour des pièces sous les combles agréables en toutes saisons.</p>
+        <ul class="svc-list">
+          <li>Sarking & contre-chevrons</li>
+          <li>Panneaux rigides haute performance</li>
+          <li>Finition placo incluse</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ico">🧱</div>
+        <h3>Isolation des murs (ITE)</h3>
+        <p>Isolation thermique par l'extérieur pour rénover votre façade tout en supprimant les ponts thermiques.</p>
+        <ul class="svc-list">
+          <li>Polystyrène expansé / laine de roche</li>
+          <li>Enduit & bardage</li>
+          <li>Amélioration du DPE</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ico">🪨</div>
+        <h3>Isolation des murs (ITI)</h3>
+        <p>Solution intérieure idéale pour les copropriétés ou logements où l'isolation extérieure n'est pas possible.</p>
+        <ul class="svc-list">
+          <li>Doublage thermo-acoustique</li>
+          <li>Faible perte de surface</li>
+          <li>Finition peinture disponible</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ico">🟫</div>
+        <h3>Isolation des planchers</h3>
+        <p>Fini les pieds froids ! Isolation du sol sur vide sanitaire ou sous-sol pour un confort optimal.</p>
+        <ul class="svc-list">
+          <li>Sous-sol & vide sanitaire</li>
+          <li>Mousse projetée / laine minérale</li>
+          <li>Réduction acoustique</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ico">💨</div>
+        <h3>Ventilation (VMC)</h3>
+        <p>Un logement bien isolé doit aussi bien respirer. Installation VMC simple et double flux pour un air sain.</p>
+        <ul class="svc-list">
+          <li>VMC simple flux hygro</li>
+          <li>VMC double flux</li>
+          <li>Entretien & remplacement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AIDES FINANCIÈRES -->
+<section id="aides" class="aides-bg">
+  <div class="inner">
+    <div class="sec-head">
+      <div class="sec-label">Financement</div>
+      <h2 class="sec-title">Des travaux souvent proches de 0 € grâce aux aides</h2>
+      <p class="sec-sub">En tant qu'entreprise certifiée RGE, Omega Solutions vous permet de bénéficier de toutes les aides de l'État. On vous aide à monter le dossier.</p>
+    </div>
+    <div class="aides-grid">
+      <div class="aide-card">
+        <div class="aide-ico">🏛️</div>
+        <h3>MaPrimeRénov'</h3>
+        <p>Aide directe de l'État versée selon vos revenus. Peut couvrir jusqu'à 90 % du coût des travaux.</p>
+        <span class="aide-tag">Jusqu'à 90 %</span>
+      </div>
+      <div class="aide-card">
+        <div class="aide-ico">⚡</div>
+        <h3>CEE – Certificats Énergie</h3>
+        <p>Prime versée par les fournisseurs d'énergie pour tout travail d'économie d'énergie réalisé.</p>
+        <span class="aide-tag">Prime directe</span>
+      </div>
+      <div class="aide-card">
+        <div class="aide-ico">🏦</div>
+        <h3>Éco-Prêt à Taux Zéro</h3>
+        <p>Empruntez jusqu'à 50 000 € sans intérêts pour financer votre rénovation énergétique complète.</p>
+        <span class="aide-tag">0 % d'intérêt</span>
+      </div>
+      <div class="aide-card">
+        <div class="aide-ico">📉</div>
+        <h3>TVA à 5,5 %</h3>
+        <p>Taux de TVA réduit applicable à tous les travaux d'isolation dans les logements de plus de 2 ans.</p>
+        <span class="aide-tag">Taux réduit</span>
+      </div>
+      <div class="aide-card">
+        <div class="aide-ico">🏡</div>
+        <h3>Aides locales</h3>
+        <p>La Région Hauts-de-France et la CA Valenciennes Métropole proposent des aides complémentaires.</p>
+        <span class="aide-tag">Cumulables</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section id="pourquoi" class="why-bg">
+  <div class="inner">
+    <div class="why-layout">
+      <div class="why-panel">
+        <div class="why-panel-title">Omega Solutions à Marly</div>
+        <div class="why-panel-sub">Votre artisan isoleur de confiance dans le Valenciennois</div>
+        <div class="panel-grid">
+          <div class="panel-item"><div class="panel-num">5★</div><div class="panel-lbl">Note Google</div></div>
+          <div class="panel-item"><div class="panel-num">14</div><div class="panel-lbl">Avis clients</div></div>
+          <div class="panel-item"><div class="panel-num">RGE</div><div class="panel-lbl">Certifié</div></div>
+          <div class="panel-item"><div class="panel-num">2022</div><div class="panel-lbl">Création</div></div>
+        </div>
+        <div class="panel-map">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong>8 bis Place Louise Michel</strong>
+            <span>59770 Marly, près de Valenciennes</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="sec-label">Pourquoi nous choisir ?</div>
+        <h2 class="sec-title" style="margin-bottom:12px;">Un artisan local sérieux et certifié</h2>
+        <p class="sec-sub" style="margin-bottom:32px;">Omega Solutions s'engage sur la qualité des matériaux, la propreté du chantier et la transparence des prix.</p>
+        <div class="why-feats">
+          <div class="wfeat">
+            <div class="wfeat-ico"><i class="fa-solid fa-certificate"></i></div>
+            <div>
+              <h4>Certification RGE</h4>
+              <p>Notre certification vous garantit l'accès à toutes les aides de l'État et un travail aux normes en vigueur.</p>
+            </div>
+          </div>
+          <div class="wfeat">
+            <div class="wfeat-ico"><i class="fa-solid fa-handshake"></i></div>
+            <div>
+              <h4>Accompagnement complet</h4>
+              <p>De l'audit de votre logement au montage de vos dossiers d'aides, on s'occupe de tout à vos côtés.</p>
+            </div>
+          </div>
+          <div class="wfeat">
+            <div class="wfeat-ico"><i class="fa-solid fa-leaf"></i></div>
+            <div>
+              <h4>Matériaux éco-responsables</h4>
+              <p>Laine minérale, ouate de cellulose, liège... Nous sélectionnons des isolants sains et durables.</p>
+            </div>
+          </div>
+          <div class="wfeat">
+            <div class="wfeat-ico"><i class="fa-solid fa-euro-sign"></i></div>
+            <div>
+              <h4>Devis gratuit & sans engagement</h4>
+              <p>Nous nous déplaçons gratuitement pour évaluer vos besoins et vous remettre un devis détaillé sous 48h.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSUS -->
+<section id="processus" class="proc-bg">
+  <div class="inner">
+    <div class="sec-head" style="text-align:center; max-width:560px; margin:0 auto 52px;">
+      <div class="sec-label">Notre méthode</div>
+      <h2 class="sec-title">De la visite à la fin des travaux</h2>
+      <p class="sec-sub" style="margin:10px auto 0;">Un processus simple et transparent, pensé pour vous faciliter la vie.</p>
+    </div>
+    <div class="proc-steps">
+      <div class="proc-step">
+        <div class="proc-num">1</div>
+        <h3>Contact</h3>
+        <p>Appelez-nous ou remplissez le formulaire. Réponse garantie sous 24h.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">2</div>
+        <h3>Visite gratuite</h3>
+        <p>Un technicien se déplace pour évaluer votre logement et vos besoins.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">3</div>
+        <h3>Devis & aides</h3>
+        <p>Vous recevez un devis clair avec le montant des aides déductibles.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">4</div>
+        <h3>Chantier propre</h3>
+        <p>Travaux réalisés dans les délais, chantier nettoyé à la livraison.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS -->
+<section id="avis" class="reviews-bg">
+  <div class="inner">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:48px;">
+      <div>
+        <div class="sec-label">Témoignages</div>
+        <h2 class="sec-title">Ce que nos clients disent</h2>
+      </div>
+      <div class="google-score">
+        <div class="gs-logo">G</div>
+        <div>
+          <div class="gs-num">5,0</div>
+          <div class="gs-stars">★★★★★</div>
+          <div class="gs-label">14 avis Google · Note parfaite</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="rev-card">
+        <div class="rev-head">
+          <div class="rev-stars">★★★★★</div>
+          <div class="rev-src"><i class="fa-brands fa-google"></i> Google</div>
+        </div>
+        <p class="rev-text">« Intervention rapide et soignée pour l'isolation de mes combles perdus. L'équipe est sérieuse, ponctuelle et le résultat est vraiment top. Ma facture de chauffage a déjà diminué ! »</p>
+        <div class="rev-author">
+          <div class="rev-av" style="background:#1a4a7a;">MH</div>
+          <div><div class="rev-name">Michel H.</div><div class="rev-date">Marly · il y a 3 mois</div></div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-head">
+          <div class="rev-stars">★★★★★</div>
+          <div class="rev-src"><i class="fa-brands fa-google"></i> Google</div>
+        </div>
+        <p class="rev-text">« Très satisfaite de l'isolation de ma façade. Le devis était clair et honnête, les aides ont été bien expliquées. Travail propre, aucune mauvaise surprise. Je recommande fortement. »</p>
+        <div class="rev-author">
+          <div class="rev-av" style="background:#e85d04;">NB</div>
+          <div><div class="rev-name">Nathalie B.</div><div class="rev-date">Valenciennes · il y a 5 mois</div></div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-head">
+          <div class="rev-stars">★★★★★</div>
+          <div class="rev-src"><i class="fa-brands fa-google"></i> Google</div>
+        </div>
+        <p class="rev-text">« Excellent professionnel, à l'écoute et réactif. Il nous a accompagnés du devis jusqu'aux démarches pour MaPrimeRénov'. Le chantier s'est déroulé exactement comme prévu. »</p>
+        <div class="rev-author">
+          <div class="rev-av" style="background:#16a34a;">KL</div>
+          <div><div class="rev-name">Karim L.</div><div class="rev-date">Préseau · il y a 7 mois</div></div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-head">
+          <div class="rev-stars">★★★★★</div>
+          <div class="rev-src"><i class="fa-brands fa-google"></i> Google</div>
+        </div>
+        <p class="rev-text">« Isolation des murs par l'extérieur réalisée avec soin. L'équipe a respecté les délais et laissé le chantier impeccable. Je sens déjà la différence sur la température dans les pièces. »</p>
+        <div class="rev-author">
+          <div class="rev-av" style="background:#7c3aed;">SC</div>
+          <div><div class="rev-name">Sylvie C.</div><div class="rev-date">Marly · il y a 8 mois</div></div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-head">
+          <div class="rev-stars">★★★★★</div>
+          <div class="rev-src"><i class="fa-brands fa-google"></i> Google</div>
+        </div>
+        <p class="rev-text">« Très bonne expérience du début à la fin. Devis rapide, prix compétitif et travail de qualité. Notre maison est nettement plus confortable et on économise sur le chauffage. »</p>
+        <div class="rev-author">
+          <div class="rev-av" style="background:#0891b2;">FD</div>
+          <div><div class="rev-name">François D.</div><div class="rev-date">Condé-sur-l'Escaut · il y a 1 an</div></div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-head">
+          <div class="rev-stars">★★★★★</div>
+          <div class="rev-src"><i class="fa-brands fa-google"></i> Google</div>
+        </div>
+        <p class="rev-text">« Société sérieuse et professionnelle. Ils m'ont bien conseillée sur le type d'isolation adapté à ma maison et m'ont aidée à obtenir les aides. Je recommande à 100 %. »</p>
+        <div class="rev-author">
+          <div class="rev-av" style="background:#db2777;">AR</div>
+          <div><div class="rev-name">Amélie R.</div><div class="rev-date">Artres · il y a 10 mois</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-bg">
+  <div class="inner">
+    <div class="contact-layout">
+      <div>
+        <div class="sec-label" style="color:var(--warm);">Contact</div>
+        <h2 class="sec-title">Votre devis gratuit en 48h</h2>
+        <p class="sec-sub">Décrivez votre projet, on se déplace gratuitement chez vous pour évaluer vos besoins et vous remettre un devis détaillé.</p>
+        <div class="contact-infos">
+          <div class="ci">
+            <div class="ci-ico"><i class="fa-solid fa-phone"></i></div>
+            <div><h4>Téléphone</h4><p><a href="tel:0636472528">06 36 47 25 28</a></p></div>
+          </div>
+          <div class="ci">
+            <div class="ci-ico"><i class="fa-solid fa-location-dot"></i></div>
+            <div><h4>Adresse</h4><p>8 bis Place Louise Michel<br/>59770 Marly</p></div>
+          </div>
+          <div class="ci">
+            <div class="ci-ico"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <h4>Horaires</h4>
+              <div class="hours-grid">
+                <div class="hour-row"><span class="hour-day">Lun – Ven</span><span class="hour-time">9h – 16h30</span></div>
+                <div class="hour-row"><span class="hour-day">Sam – Dim</span><span class="hour-time">Fermé</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-ico"><i class="fa-solid fa-map"></i></div>
+            <div><h4>Zone d'intervention</h4><p>Marly, Valenciennes, Préseau,<br/>Condé-sur-l'Escaut et alentours (59)</p></div>
+          </div>
+        </div>
+      </div>
+      <form class="cform" onsubmit="submitForm(event)">
+        <div class="frow">
+          <input type="text" placeholder="Prénom & Nom *" required/>
+          <input type="tel" placeholder="Téléphone *" required/>
+        </div>
+        <input type="email" placeholder="Adresse e-mail"/>
+        <select required>
+          <option value="" disabled selected>Type de travaux *</option>
+          <option>Isolation combles perdus</option>
+          <option>Isolation combles aménagés</option>
+          <option>Isolation murs par l'extérieur (ITE)</option>
+          <option>Isolation murs par l'intérieur (ITI)</option>
+          <option>Isolation planchers / sous-sol</option>
+          <option>Installation VMC</option>
+          <option>Plusieurs travaux / Rénovation globale</option>
+          <option>Autre</option>
+        </select>
+        <input type="text" placeholder="Ville *" required/>
+        <textarea placeholder="Décrivez votre logement et vos besoins... (type de maison, surface, année de construction...)"></textarea>
+        <button type="submit" class="fsub"><i class="fa-solid fa-paper-plane"></i> Envoyer ma demande de devis gratuit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-grid">
+    <div>
+      <div class="ft-brand">Omega<span> Solutions</span></div>
+      <p class="ft-desc">Entrepreneur spécialisé dans l'isolation à Marly (59). Certifié RGE, nous intervenons pour les particuliers sur toute la zone Valenciennois.</p>
+    </div>
+    <div class="ft-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Isolation combles</a></li>
+        <li><a href="#services">Isolation murs ITE</a></li>
+        <li><a href="#services">Isolation murs ITI</a></li>
+        <li><a href="#services">Isolation planchers</a></li>
+        <li><a href="#services">VMC</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Informations</h4>
+      <ul>
+        <li><a href="#aides">Aides financières</a></li>
+        <li><a href="#pourquoi">À propos</a></li>
+        <li><a href="#avis">Avis clients</a></li>
+        <li><a href="#contact">Devis gratuit</a></li>
+        <li><a href="#">Mentions légales</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span>© 2025 Omega Solutions — 8 bis Place Louise Michel, 59770 Marly — SIREN 913 579 504</span>
+    <div class="ft-legal">
+      <a href="#">Mentions légales</a>
+      <a href="#">Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function submitForm(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.fsub');
+    btn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Demande envoyée — nous vous rappelons sous 24h !';
+    btn.style.background = '#16a34a';
+    setTimeout(() => {
+      btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Envoyer ma demande de devis gratuit';
+      btn.style.background = '';
+      e.target.reset();
+    }, 5000);
+  }
+  const secs = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    secs.forEach(s => { if (window.scrollY >= s.offsetTop - 90) cur = s.id; });
+    links.forEach(l => {
+      const active = l.getAttribute('href') === '#' + cur;
+      l.style.color = active ? 'var(--primary)' : '';
+      l.style.fontWeight = active ? '700' : '';
+    });
+  });
+</script>
+</body>
+</html>
